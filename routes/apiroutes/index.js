@@ -1,8 +1,7 @@
-const mysql = require('mysql2');
 const router = require('express').Router();
 
-router.get('/', (_req, res) => {
-  res.send('Hello');
-});
+const userroutes = require('./userroutes');
+
+router.use('/users', userroutes);
 
 module.exports = router;
